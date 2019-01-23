@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Aruba"
-description: "Instructions on how to integrate Aruba routers into Home Assistant."
+description: "Instructions on how to integrate Aruba IAPs into Home Assistant."
 date: 2015-08-31 08:45
 sidebar: true
 comments: false
@@ -17,10 +17,10 @@ This platform allows you to detect presence by looking at connected devices to a
 
 Supported devices (tested):
 
-- ARUBA AP-105
+- All Aruba IAP (Instant AP) regardless of model
 
 <p class='note warning'>
-This device tracker needs telnet to be enabled on the router.
+This device tracker needs telnet to be enabled on the router. This is not a "best practice" from Aruba's standpoint and should not be used. The more secure alternative is to use SNMP to determine what clients are connected to your wireless network. Although the user-table timeout is 5 minutes when a client leaves the network, the population of this table is instantaneous when associating/authenticating to the SSID.
 </p>
 
 To use this device tracker in your installation, add the following to your `configuration.yaml` file:
